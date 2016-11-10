@@ -1,5 +1,5 @@
-EXENAME = wall_bits
-OBJS = wall_bits.o png.o rgbapixel.o
+EXENAME = sprite_to_bits
+OBJS = sprite_to_bits.o png.o rgbapixel.o
 
 CXX = clang++
 CXXFLAGS = -std=c++1y -stdlib=libc++ -c -g -O0 -Wall -Wextra -pedantic
@@ -11,8 +11,8 @@ all : $(EXENAME)
 $(EXENAME) : $(OBJS)
 	$(LD) $(OBJS) $(LDFLAGS) -o $(EXENAME)
 
-wall_bits.o : wall_bits.cpp png.h rgbapixel.h
-	$(CXX) $(CXXFLAGS) wall_bits.cpp
+sprite_to_bits.o : sprite_to_bits.cpp png.h rgbapixel.h
+	$(CXX) $(CXXFLAGS) sprite_to_bits.cpp
 
 png.o : png.cpp png.h rgbapixel.h
 	$(CXX) $(CXXFLAGS) png.cpp
