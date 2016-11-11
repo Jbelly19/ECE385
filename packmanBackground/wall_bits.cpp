@@ -28,12 +28,14 @@ int main(){
 			
 			if(curr != blue){
 
-				myfile <<"1'b,\n";
+				myfile <<"1,\n";
 
 			}else{
-				myfile <<"0'b,\n";
+				myfile <<"0,\n";
 			}
 		}
+	
+
 	}
 							
 
